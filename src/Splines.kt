@@ -40,9 +40,9 @@ class Splines {
     private val h = arrayListOf<Float>()
 
     /**
-     * диагональ, лежащая под главной
+     * диагональ, лежащая над главной
      */
-    private val bottom = arrayListOf<Float>()
+    private val top = arrayListOf<Float>()
 
     /**
      * главная диагональ матрицы A
@@ -50,9 +50,9 @@ class Splines {
     private val main = arrayListOf<Float>()
 
     /**
-     * диагональ, лежащая над главной
+     * диагональ, лежащая под главной
      */
-    private val top = arrayListOf<Float>()
+    private val bottom = arrayListOf<Float>()
 
     /**
      * файл для вывода
@@ -191,6 +191,9 @@ class Splines {
         bottom.add(0.5f)
     }
 
+    /**
+     * функция нахождения решения методом прогонки
+     */
     private fun findSolution(functions: List<Float>): List<Float> {
         val result = mutableListOf<Float>()
         val alpha = mutableListOf<Float>()
